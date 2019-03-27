@@ -1,0 +1,10 @@
+.RegisterSet {
+  height: 100%;
+  background-color: #38383a;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.registerRow {
+  display: flex;
+}

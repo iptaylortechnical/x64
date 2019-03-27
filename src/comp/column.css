@@ -1,0 +1,16 @@
+.Column {
+  width: 25%;
+  /* margin-right: 1px; */
+  /* border: 1px solid grey; */
+}
+
+.columnHeader {
+  height: 3.5vh;
+  background-color: #38383a;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  /* border: 2px solid #222226; */
+  /* border-left: none; */
+  /* background-color: #39393a; */
+}
