@@ -1,40 +1,43 @@
 .Register {
   background-color: white;
   /* border-radius: 5px; */
-  height: 10.5vh;
-  width: 49%;
-  margin: 1% 1% 1% 1%;
+  height: 5vh;
+  /* margin: .7vh .7vh .7vh .7vh ; */
+  margin-bottom: .7vh;
+  position: relative;
 }
 
-.ident {
+/* .ident {
   position: relative;
-  /* bottom: 0; */
   height: 3vh;
   line-height: 3vh;
   text-align: center;
   width: 100%;
   background-color: lightgrey;
-  /* border-right: 1px dotted #38383a; */
-  /* border-bottom: 1px dotted #38383a; */
 
+} */
+
+.ident {
+  right: .5vh;
+  top: 0;
+  position: absolute;
 }
 
 .registerValues {
-  height: 7.5vh;
+  /* height: 2vh; */
   padding: 3px;
 }
 
 .registerHexValue {
   font-weight: bold;
-  height: 3.75vh;
-  line-height: 3.75vh;
+  /* height: 3.5vh; */
+  /* line-height: 3.5vh; */
 }
 
 .registerDecValue {
   font-weight: bold;
-  height: 3.75vh;
-  line-height: 2vh;
-
+  /* height: 3.5vh; */
+  /* line-height: 2vh; */
 }
 
 .hexLabel {
