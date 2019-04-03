@@ -1,3 +1,5 @@
 .StackLine {
   width: 100%;
+  background: white;
+  margin-top: 3px;
 }

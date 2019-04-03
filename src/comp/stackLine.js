@@ -5,7 +5,7 @@ class StackLine extends Component {
   render() {
     return (
       <div className="StackLine">
-        {this.props.value}
+        {'0x' + this.props.value.toString(16).padStart(32, '0')}
       </div>
     )
   }
