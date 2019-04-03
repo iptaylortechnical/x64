@@ -1,0 +1,10 @@
+.BinaryCell {
+  display: inline;
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.on {
+  background-color: darkgray;
+  color: white;
+}

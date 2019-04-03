@@ -1,0 +1,9 @@
+.RipSet {
+  background-color: #eaedf1;
+  height: 92vh;
+}
+
+.floatingRegister {
+  position: absolute;
+  bottom: 0;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './heapSet.css';
+import './css/heapSet.css';
 
 class HeapSet extends Component {
   render() {

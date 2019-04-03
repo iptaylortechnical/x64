@@ -1,0 +1,6 @@
+.HexCell {
+  display: inline;
+  font-family: monospace;
+  font-size: 38.5px;
+  border-right: 1px solid black;
+}

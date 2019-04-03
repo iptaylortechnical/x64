@@ -1,0 +1,25 @@
+.Instruction {
+  width: 100%;
+  height: 6vh;
+}
+
+.formattedInstruction {
+  display: inline-block;
+}
+
+.formatted {
+  display: inline-block;
+}
+
+.instructionCode {
+  font-weight: bold;
+}
+
+.instructionContent {
+  margin-left: 10px;
+}
+
+.current {
+  border: 1px solid blue;
+  width: 99%;
+}

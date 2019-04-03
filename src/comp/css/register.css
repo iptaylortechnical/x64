@@ -1,10 +1,11 @@
 .Register {
   background-color: white;
   /* border-radius: 5px; */
-  height: 5vh;
+  height: 10.8vh;
   /* margin: .7vh .7vh .7vh .7vh ; */
   margin-bottom: .7vh;
   position: relative;
+  /* text-align: center; */
 }
 
 /* .ident {
@@ -19,7 +20,7 @@
 
 .ident {
   right: .5vh;
-  top: 0;
+  bottom: 0;
   position: absolute;
 }
 
@@ -48,4 +49,11 @@
 .decLabel {
   color: black;
   font-weight: normal;
+}
+
+.decimalValue {
+  bottom: 0;
+  position: absolute;
+  font-weight: bold;
+  color: blue;
 }
