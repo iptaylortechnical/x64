@@ -17,13 +17,14 @@ class Body extends Component {
         </Column>
         <DoubleColumn slots={[
           {
+            headerText: "Heap",
+            content: <HeapSet />
+          },
+          {
             headerText: "Stack",
             content: <StackSet stack={this.props.stack}/>
           },
-          {
-            headerText: "Heap",
-            content: <HeapSet />
-          }
+          
         ]} />
         {/* <Column headerText="Stack"><StackSet /></Column> */}
         <Column headerText="Registers 0-7">

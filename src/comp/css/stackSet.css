@@ -1,4 +1,21 @@
 .StackSet {
   background-color: #e1eaf1;
-  height: 100%;
+  height: 44.25vh;
+  position: relative;
+}
+
+.stackBottomContainer {
+  position: absolute;
+  bottom: 0;
+}
+
+.stackAddresses {
+  width: 5vw;
+  display: inline-block;
+  background-color: #38383a;
+}
+
+.stackDisplay {
+  width: 20vw;
+  display: inline-block;
 }

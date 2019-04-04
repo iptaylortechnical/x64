@@ -17,7 +17,7 @@ class App extends Component {
       rsi: 0,
       rdi: 0,
       rbp: 10,
-      rsp: 0,
+      rsp: 0xffffffff,
     },
     registers815: {
       r8: 0,
@@ -42,10 +42,10 @@ class App extends Component {
         const newRIP = this.state.rip + 2 + currentInst.instruction.length;
         const newCounter = this.state.artificialProgramCounter + 1;
         const stackItem = this.state.registers07.rbp;
-        const newStack = this.state.stack + stackItem.toString(16).split('').reverse().join().padStart(32, '0');
+        const newStack = this.state.stack + stackItem.toString(16).padStart(16, '0');
 
         const oldRegs = this.state.registers07;
-        oldRegs.rsp += 8;
+        oldRegs.rsp -= 16;
 
         this.setState({
           rip: newRIP,

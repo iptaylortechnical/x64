@@ -15,7 +15,7 @@ class RipSet extends Component {
                 instruction={i} />)}
         </div>
         <div className="floatingRegister">
-          <Register value={this.props.current} label="RIP" />
+          <Register value={this.props.current + 0x400200} label="RIP" />
         </div>
       </div>
     )
