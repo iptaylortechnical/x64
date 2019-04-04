@@ -32,7 +32,7 @@ class App extends Component {
     rip: 0,
     artificialProgramCounter: 0,
     instructions: [],
-    stack: '0',
+    stack: '',
   }
 
   handleKeyEvent = (event) => {
