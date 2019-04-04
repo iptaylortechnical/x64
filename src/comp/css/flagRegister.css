@@ -1,0 +1,9 @@
+.FlagRegister {
+    height: 9vh;
+}
+
+.Flag {
+    display: inline-block;
+    width: 1.38vw;
+    text-align: center;
+}

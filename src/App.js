@@ -33,6 +33,30 @@ class App extends Component {
     artificialProgramCounter: 0,
     instructions: [],
     stack: '',
+    FLAGS: {
+      CF: 0,
+      PF: 0,
+      AF: 0,
+      ZF: 0,
+      SF: 0,
+      TF: 0,
+      IF: 0,
+      DF: 0,
+      OF: 0,
+      IO: 0,
+      PL: 0,
+      NT: 0,
+      RF: 0,
+      VM: 0,
+      AC: 0,
+      VIF: 0,
+      VIP: 0,
+      ID: 0,
+    }
+  }
+
+  execute = () => {
+
   }
 
   handleKeyEvent = (event) => {
@@ -41,6 +65,8 @@ class App extends Component {
         const currentInst = this.state.instructions[this.state.artificialProgramCounter];
         const newRIP = this.state.rip + 2 + currentInst.instruction.length;
         const newCounter = this.state.artificialProgramCounter + 1;
+
+        // const {}
 
         this.setState({
           rip: newRIP,
@@ -89,7 +115,8 @@ class App extends Component {
         <Body current={this.state.rip} instructions={this.state.instructions}
           registers07={this.state.registers07}
           registers815={this.state.registers815}
-          stack={this.state.stack} />
+          stack={this.state.stack}
+          flags={this.state.FLAGS} />
       </div>
     );
   }

@@ -13,7 +13,10 @@ class Body extends Component {
     return (
       <div className='Body'>
         <Column headerText="Instructions">
-          <RipSet current={this.props.current} instructions={this.props.instructions} />
+          <RipSet
+            current={this.props.current}
+            instructions={this.props.instructions}
+            flags={this.props.flags} />
         </Column>
         <DoubleColumn slots={[
           {
@@ -22,9 +25,9 @@ class Body extends Component {
           },
           {
             headerText: "Stack",
-            content: <StackSet stack={this.props.stack}/>
+            content: <StackSet stack={this.props.stack} />
           },
-          
+
         ]} />
         {/* <Column headerText="Stack"><StackSet /></Column> */}
         <Column headerText="Registers 0-7">
