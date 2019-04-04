@@ -32,7 +32,7 @@ class App extends Component {
     rip: 0,
     artificialProgramCounter: 0,
     instructions: [],
-    stack: [],
+    stack: '0',
   }
 
   handleKeyEvent = (event) => {
@@ -42,7 +42,7 @@ class App extends Component {
         const newRIP = this.state.rip + 2 + currentInst.instruction.length;
         const newCounter = this.state.artificialProgramCounter + 1;
         const stackItem = this.state.registers07.rbp;
-        const newStack = this.state.stack.concat(stackItem);
+        const newStack = this.state.stack + stackItem.toString(16).split('').reverse().join().padStart(32, '0');
 
         const oldRegs = this.state.registers07;
         oldRegs.rsp += 8;
@@ -101,23 +101,6 @@ class App extends Component {
           registers815={this.state.registers815}
           stack={this.state.stack} />
       </div>
-
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      // </div>
     );
   }
 }

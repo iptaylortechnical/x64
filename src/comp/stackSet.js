@@ -4,9 +4,10 @@ import StackLine from './stackLine';
 
 class StackSet extends Component {
   render() {
+    const lines = this.props.stack.match(/.{1,32}/g);
     return (
       <div className="StackSet">
-        {this.props.stack.map(s => <StackLine value={s}/>)}
+        {lines.map(s => <StackLine value={s}/>)}
       </div>
     )
   }
