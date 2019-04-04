@@ -41,24 +41,16 @@ class App extends Component {
         const currentInst = this.state.instructions[this.state.artificialProgramCounter];
         const newRIP = this.state.rip + 2 + currentInst.instruction.length;
         const newCounter = this.state.artificialProgramCounter + 1;
-        const stackItem = this.state.registers07.rbp;
-        const newStack = this.state.stack + stackItem.toString(16).padStart(16, '0');
-
-        const oldRegs = this.state.registers07;
-        oldRegs.rsp -= 16;
 
         this.setState({
           rip: newRIP,
           artificialProgramCounter: newCounter,
-          stack: newStack,
-          registers07: oldRegs
         });
         break;
       default:
         break;
     }
   }
-
 
   search(bigHex, location) {
     const insHex = bigHex.slice(0, 2);
@@ -78,14 +70,12 @@ class App extends Component {
     }
 
     this.search(nextHex, newLocation);
-
   }
 
   constructor(props) {
     super(props);
     const hexIn = '554889e5c745fc00000000c745f805000000c745f406000000c745f007000000';
     this.search(hexIn, 0);
-    console.log(this.state.instructions);
   }
 
   componentDidMount() {
