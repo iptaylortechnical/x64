@@ -45,7 +45,7 @@ class App extends Component {
         const newStack = this.state.stack.concat(stackItem);
 
         const oldRegs = this.state.registers07;
-        oldRegs.rsp += 64;
+        oldRegs.rsp += 8;
 
         this.setState({
           rip: newRIP,
