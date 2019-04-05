@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/instruction.css';
-import util from '../util';
+import util from './utilities/util';
 
 class Instruction extends Component {
   render() {

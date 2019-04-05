@@ -4,9 +4,12 @@
 
 .Flag {
     display: inline-block;
-    width: 4.15vw;
+    width: 3.8vw;
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background: darkgray;
+    margin: 3px;
+    color: white;
 }
 
 .flagDescription {
@@ -18,4 +21,5 @@
 .flagValue {
     display: inline-block;
     width: 33%;
+    background: black;
 }

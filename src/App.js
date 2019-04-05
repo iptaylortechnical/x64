@@ -5,7 +5,8 @@ import './App.css';
 import Header from './comp/header';
 import Body from './comp/body';
 
-import util from './util';
+import util from './comp/utilities/util';
+import engine from './comp/utilities/engine';
 
 class App extends Component {
   state = {
@@ -55,8 +56,8 @@ class App extends Component {
     }
   }
 
-  execute = () => {
-
+  execute = (instruction, register07, register815, stack, flags) => {
+    return engine.tick(instruction, register07, register815, stack, flags);
   }
 
   handleKeyEvent = (event) => {
@@ -66,12 +67,27 @@ class App extends Component {
         const newRIP = this.state.rip + 2 + currentInst.instruction.length;
         const newCounter = this.state.artificialProgramCounter + 1;
 
-        // const {}
+        const {
+          registers07: newRegister07,
+          registers815: newRegister815,
+          stack: newStack,
+          flags: newFlags,
+        } = this.execute(currentInst,
+          this.state.registers07,
+          this.state.registers815,
+          this.state.stack,
+          this.state.FLAGS);
 
         this.setState({
           rip: newRIP,
           artificialProgramCounter: newCounter,
+          register07: newRegister07,
+          register815: newRegister815,
+          stack: newStack,
+          FLAGS: newFlags,
         });
+
+        console.log(this.state);
         break;
       default:
         break;
