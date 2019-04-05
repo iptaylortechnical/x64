@@ -4,6 +4,18 @@
 
 .Flag {
     display: inline-block;
-    width: 1.38vw;
+    width: 4.15vw;
     text-align: center;
+    border: 1px solid black;
+}
+
+.flagDescription {
+    display: inline-block;
+    text-align: center;
+    width: 66%;
+}
+
+.flagValue {
+    display: inline-block;
+    width: 33%;
 }
