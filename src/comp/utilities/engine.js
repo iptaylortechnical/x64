@@ -6,6 +6,23 @@ const Functions = {
     pack.stack = newStack;
 
     return pack;
+  },
+  '48': (pack) => {
+    const { instruction } = pack.instr;
+
+    const newCode = instruction.slice(0,2);
+    const newInstruction = instruction.slice(2, instruction.length);
+
+    pack.isntr = {
+      code: newCode,
+      instruction: newInstruction,
+    }
+
+    return Functions['89'](pack);
+  },
+  '89': (pack) => {
+    console.log(pack);
+    return pack;
   }
 }
 
