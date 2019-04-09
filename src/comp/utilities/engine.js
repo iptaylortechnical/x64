@@ -1,3 +1,5 @@
+const { modRM } = require('./engineUtils');
+
 const Functions = {
   '55': (pack) => {
     const rbpValue = pack.registers07.rbp;
@@ -16,6 +18,9 @@ const Functions = {
     pack.isntr = {
       code: newCode,
       instruction: newInstruction,
+      REX: {
+        W: 1
+      }
     }
 
     return Functions['89'](pack);
