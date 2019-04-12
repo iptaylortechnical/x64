@@ -1,4 +1,5 @@
 const { modRM } = require('./engineUtils');
+const {setPath} = require('./util');
 
 const Functions = {
   '55': (pack) => {
@@ -26,7 +27,10 @@ const Functions = {
     return Functions['89'](pack);
   },
   '89': (pack) => {
-    console.log(pack);
+
+    const {set, value} = modRM(pack);
+    setPath(pack, set, value);
+
     return pack;
   }
 }

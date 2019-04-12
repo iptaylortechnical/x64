@@ -14,7 +14,19 @@ const getDescription = (instr) => {
   }[instr];
 }
 
+const setPath = (pack, path, value) => {
+  const parts = path.split('.');
+  const last = parts.pop();
+  let temp = pack;
+  for (let pIndex in parts) {
+      temp = temp[parts[pIndex]];
+  }
+
+  temp[last] = value;
+}
+
 module.exports = {
   getLength,
-  getDescription
+  getDescription,
+  setPath,
 }
